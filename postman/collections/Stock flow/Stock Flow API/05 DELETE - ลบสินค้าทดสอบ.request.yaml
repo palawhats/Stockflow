@@ -1,0 +1,6 @@
+$kind: http-request
+description: ลบสินค้าตาม ID (ต้องใช้สิทธิ์ ADMIN)
+url: "{{baseUrl}}/api/products/{{productId}}"
+method: DELETE
+settings: {}
+order: 5000

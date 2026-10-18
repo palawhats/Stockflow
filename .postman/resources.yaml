@@ -1,0 +1,8 @@
+workspace:
+  id: 8aa5e672-8407-41c4-8cfc-bb59a7650e9a
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../postman/collections/Stock flow: 58676647-e6842a95-dd40-41af-9812-f18da300e429

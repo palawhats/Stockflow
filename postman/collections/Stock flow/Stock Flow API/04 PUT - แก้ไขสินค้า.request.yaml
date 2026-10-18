@@ -1,0 +1,21 @@
+$kind: http-request
+description: แก้ไขสินค้าตาม ID (ต้องส่งข้อมูลครบทุกฟิลด์)
+url: "{{baseUrl}}/api/products/{{productId}}"
+method: PUT
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "sku": "SKU-{{timestamp}}",
+      "name": "สินค้าแก้ไขแล้ว",
+      "description": "อัปเดตข้อมูลจาก Postman",
+      "category": "ทั่วไป",
+      "price": 299,
+      "stock": 20,
+      "unit": "ชิ้น",
+      "isActive": true
+    }
+settings: {}
+order: 4000

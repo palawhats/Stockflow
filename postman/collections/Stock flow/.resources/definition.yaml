@@ -1,0 +1,10 @@
+$kind: collection
+description: "Simplified Postman Collection for StockFlow/Prodexa product CRUD API. Contains only 5 requests: GET all, POST, GET by ID, PUT, DELETE. No new API created."
+variables:
+  baseUrl: http://localhost:3000
+  productId: "1"
+  timestamp: ""
+scripts:
+  - type: http:beforeRequest
+    code: pm.collectionVariables.set('timestamp', Date.now());
+    language: text/javascript

@@ -1,0 +1,37 @@
+$kind: http-request
+description: เพิ่มสินค้าใหม่ และบันทึก id ไว้ในตัวแปร productId อัตโนมัติ
+url: "{{baseUrl}}/api/products"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "sku": "SKU-{{timestamp}}",
+      "name": "สินค้าใหม่ทดสอบ",
+      "description": "สร้างจาก Postman",
+      "category": "ทั่วไป",
+      "price": 199,
+      "stock": 10,
+      "unit": "ชิ้น",
+      "isActive": true
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('Status code is 201 or 200', function () {
+          pm.expect(pm.response.code).to.be.oneOf([200, 201]);
+      });
+
+      let jsonData = {};
+      try { jsonData = pm.response.json(); } catch (e) {}
+      if (jsonData.data && jsonData.data.id) {
+          pm.collectionVariables.set('productId', jsonData.data.id);
+      }
+      pm.test('Saved productId', function () {
+          pm.expect(pm.collectionVariables.get('productId')).to.exist;
+      });
+    language: text/javascript
+settings: {}
+order: 2000

@@ -1,0 +1,6 @@
+$kind: http-request
+description: ดึงรายละเอียดสินค้าตาม ID
+url: "{{baseUrl}}/api/products/{{productId}}"
+method: GET
+settings: {}
+order: 3000
