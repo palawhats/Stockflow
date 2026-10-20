@@ -18,6 +18,9 @@
 
 
 ---
+## Vercel link
+https://stockflow-seven-taupe.vercel.app/
+---
 ## ภาพตัวอย่าง
 <img width="1919" height="942" alt="image" src="https://github.com/user-attachments/assets/2906ff2a-c476-4b0b-9707-3d4c616d5098" />
 <img width="1919" height="938" alt="image" src="https://github.com/user-attachments/assets/34d64185-6302-4596-b0db-0b013a473dc9" />
